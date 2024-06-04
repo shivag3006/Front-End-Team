@@ -1,0 +1,19 @@
+/* src/CardSlider.css */
+.card {
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card h3 {
+    margin: 10px 0;
+  }
+  
+  .card p {
+    color: #666;
+  }
+  
