@@ -1,19 +1,43 @@
+import React from "react";
+import AboutUs from "./Pages/AboutUs";
+import ContactUs from "./Pages/ContactUs";
 
-// import { Form } from 'react-bootstrap';
-import './App.css';
-
-
-import Userinterface from './Userinterface';
+import WhatWeDo from "./Pages/WhatWeDo";
+import Home from "./Pages/Home";
+import Layout from "./Pages/Layout";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Gallery from "./Pages/Gallery";
+import Projects from "./Pages/Projects";
+import Footer from "./Pages/Footer";
+import Login from "./Pages/Login";
+import Donate from "./Pages/Donate";
+import MediaCorner from "./Pages/MediaCorner";
+import RequestCallback from "./Pages/RequestCallback";
 
 const App = () => {
   return (
     <div className="App">
-      
-      <Userinterface/>
-      
+      {/* <header className="App-header"></header> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<AboutUs />} />
+            <Route path="home" element={<Home />} />
+            <Route path="whatwedo" element={<WhatWeDo />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="*" element={<ContactUs />} />
+            <Route path="login" element={<Login />} />
+            <Route path="donate" element={<Donate />} />
+            <Route path="mediacorner" element={<MediaCorner />} />
+            <Route path="requestcallback" element={<RequestCallback />} />
+          </Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
-

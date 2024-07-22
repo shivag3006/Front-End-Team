@@ -1,5 +1,223 @@
-container-fluid::after {
-    background-color: blue;
 
+  .nav-item a:hover {
+    color: rgb(241, 233, 243); 
+  }
+  body {
+    padding-top:120px;
+  }
+  /* .home{
+    padding-top:70px;
+  }
+  .about{
+    padding-top:70px;
+  }
+  .projects{
+    padding-top:100px;
+  }
+  .gallery{
+    padding-top:70px;
+  }
+  .contact{
+    padding-top:70px;
+  }
+  .donate{
+    padding-top:100px;
+  }
+  .login{
+    padding-top:80px;
+  } */
 
+  
+/* ======================================for Login Apllication=====================================  */
+    
+.navbar a:hover {
+  color: black;
 }
+  .btn a {
+    text-decoration: none;
+  }
+
+  .btn2 a{
+    color: #f76d11;
+  }
+  .btn2 a:hover{
+    color: black;
+    background-color: #fdbb2d;
+  }   
+  
+.login{
+    height: 100%;
+    width: 100%;
+    background: var(--zen-neutral-1300);
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+
+  .image {
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+  }
+  /* .nav-link:hover{ 
+    color: blue;
+  } */
+
+
+  /* card shadow */
+  .card {
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+
+  }
+  
+  /* ===============================================card hover zoom effects with img also , shadow=================== */
+  .homecard:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;  
+  }
+
+  .homecard img:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease; 
+  }
+  .p-card:hover{
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  .card-body:hover{
+      transform: rotate(deg) scale(1.5);
+      transition: transform 0.5s ease-in-out; 
+  }
+
+  /* ===============================================For Popup Side Bar============================= */
+
+  .popup-side-bar {
+    padding: 5px 12px;
+    position: fixed;
+    top: 80%;
+    z-index: 999;
+    left: auto;
+    right: -45px;
+    background: #fa4700;
+    transform: rotate(90deg);
+  }
+  .popup-side-bar a {
+    color: white;
+  }
+  /* ===============================================For Popup Side Bar2============================= */
+
+  .popup-side-bar2 {
+    /* font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    padding: 5px 15px;
+    position: fixed;
+    top: 30%;
+    z-index: 999;
+    left: auto;
+    right: -61px;
+    background: #fa4700;
+    transform: rotate(90deg);
+  }
+  .popup-side-bar2 a {
+    color: white;
+  }
+  /* ===================================================================================== */
+
+
+  .container2 {
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); 
+    height: 1150px;
+  }
+
+
+  /* For Contact Us Pge */
+.con-com {
+    border: none !important;
+}
+.con-com {
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: rgb(163, 163, 4);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.home-list-pop::after {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    padding: 15px 0px;
+    margin-bottom: 30px;
+
+    box-shadow: 0px 2px 8px rgba(8, 8, 8, 0.07);
+    border: 1px solid #f1f2f3;
+}
+.list-spac {
+    margin: 15px;
+    padding: 15px 0px;
+    margin-bottom: 15px !important;
+}
+/* From here=================RequestCallback CSS applyed ======================================= */
+
+/* .App {
+  text-align: center;
+} */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.request {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.request div {
+  margin-bottom: 15px;
+}
+
+.request label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.request input,
+.request textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.request button {
+  background: #61dafb;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.request button:hover {
+  background: #21a1f1;
+}
+/* ===============================CSS for 𝐋𝐨𝐠𝐢𝐧 𝐏𝐚𝐠𝐞========================================== */
+
+/* .image {
+  background-image: url("Login2.jpg");
+  background-size: 100% 100%;
+  padding: 77px;
+
+} */
+
