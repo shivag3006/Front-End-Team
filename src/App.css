@@ -29,7 +29,17 @@
 
   
 /* ======================================for Login Apllication=====================================  */
-    
+  
+
+.offcanvas {
+  background-color: white !important; /* Force the offcanvas background to be white */
+}
+
+.offcanvas-backdrop {
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Set backdrop to a translucent black */
+}
+
+
 .navbar a:hover {
   color: black;
 }
@@ -129,6 +139,8 @@
 
 
   /* ======================================For Contact_Us Page======================================== */
+
+
 .con-com {
     border: none !important;
 }

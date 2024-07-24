@@ -14,6 +14,8 @@ import Login from "./Pages/Login";
 import Donate from "./Pages/Donate";
 import MediaCorner from "./Pages/MediaCorner";
 import RequestCallback from "./Pages/RequestCallback";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const App = () => {
   return (

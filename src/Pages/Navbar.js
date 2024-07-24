@@ -1,188 +1,332 @@
-import { Link } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
+
+// const Navbar = () => {
+//     return (
+//         <div>
+//             <nav className="navbar navbar-expand-lg shadow bg-warning rounded fixed-top">
+//                 <div className="container-fluid">
+//                     <img
+//                         src={"vidhyahan.png"}
+//                         alt="logo is not working"
+//                         width="90px"
+//                         height="50px"
+//                     />
+//                     <Link className="navbar-brand p-3 mb-1" to="#">
+//                         <b>𝐕𝐢𝐝𝐡-ये-𝐃𝐡𝐚𝐧-𝐅𝐮𝐧𝐝𝐚𝐭𝐢𝐨𝐧</b>
+//                     </Link>
+//                     <button
+//                         className="navbar-toggler"
+//                         type="button"
+//                         data-bs-toggle="offcanvas"
+//                         data-bs-target="#offcanvasNavbar"
+//                         aria-controls="offcanvasNavbar"
+//                     >
+//                         <span className="navbar-toggler-icon"></span>
+//                     </button>
+//                     <div
+//                         className="offcanvas offcanvas-end"
+//                         tabIndex="-1"
+//                         id="offcanvasNavbar"
+//                         aria-labelledby="offcanvasNavbarLabel"
+//                     >
+//                         <div className="offcanvas-header">
+//                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+//                             <button
+//                                 type="button"
+//                                 className="btn-close text-reset"
+//                                 data-bs-dismiss="offcanvas"
+//                                 aria-label="Close"
+//                             ></button>
+//                         </div>
+//                         <div className="offcanvas-body">
+//                             <ul className="navbar-nav ms-auto mb-lg-0">
+//                                 <li className="nav-item">
+//                                     <NavLink className="nav-link" aria-current="page" to="/home">
+//                                         <b>Home</b>
+//                                     </NavLink>
+//                                 </li>
+//                                 <li className="nav-item">
+//                                     <NavLink className="nav-link" aria-current="page" to="/">
+//                                         <b>AboutUs</b>
+//                                     </NavLink>
+//                                 </li>
+//                                 <li className="nav-item dropdown">
+//                                     <a
+//                                         className="nav-link dropdown-toggle"
+//                                         href="whatwedo"
+//                                         role="button"
+//                                         data-bs-toggle="dropdown"
+//                                         aria-expanded="false"
+//                                     >
+//                                         <b>What we do</b>
+//                                     </a>
+//                                     <ul className="dropdown-menu">
+//                                         <li>
+//                                             <a
+//                                                 className="dropdown-item"
+//                                                 href="https://www.instagram.com/vidyadhan_non_profit_org/"
+//                                             >
+//                                                 Vidhyadhan Instagram
+//                                             </a>
+//                                         </li>
+//                                         <li>
+//                                             <a className="dropdown-item" href="https://www.flipkart.com/">
+//                                                 Flipkart Website
+//                                             </a>
+//                                         </li>
+//                                         <li>
+//                                             <a
+//                                                 className="dropdown-item"
+//                                                 href="https://y4d.ngo/what_we_do"
+//                                             >
+//                                                 Something else here
+//                                             </a>
+//                                         </li>
+//                                     </ul>
+//                                 </li>
+//                                 <li className="nav-item">
+//                                     <NavLink className="nav-link" aria-current="page" to="/projects">
+//                                         <b>Projects</b>
+//                                     </NavLink>
+//                                 </li>
+//                                 <li className="nav-item">
+//                                     <NavLink className="nav-link" aria-current="page" to="/gallery">
+//                                         <b>Gallery</b>
+//                                     </NavLink>
+//                                 </li>
+//                                 <li className="nav-item">
+//                                     <NavLink className="nav-link" aria-current="page" to="/contactus">
+//                                         <b>ContactUs</b>
+//                                     </NavLink>
+//                                 </li>
+//                                 <li className="nav-item dropdown">
+//                                     <a
+//                                         className="nav-link dropdown-toggle"
+//                                         href="whatwedo"
+//                                         role="button"
+//                                         data-bs-toggle="dropdown"
+//                                         aria-expanded="false"
+//                                     >
+//                                         <b>Media Corner</b>
+//                                     </a>
+//                                     <ul className="dropdown-menu">
+//                                         <li>
+//                                             <a className="dropdown-item" href="https://web.whatsapp.com/">
+//                                                 Vidhyadhan Whatsapp
+//                                             </a>
+//                                         </li>
+//                                         <li>
+//                                             <a className="dropdown-item" href="https://www.amazon.com/">
+//                                                 Flipkart Website
+//                                             </a>
+//                                         </li>
+//                                         <li>
+//                                             <a
+//                                                 className="dropdown-item"
+//                                                 href="https://y4d.ngo/what_we_do"
+//                                             >
+//                                                 Something else here
+//                                             </a>
+//                                         </li>
+//                                     </ul>
+//                                 </li>
+//                                 <li className="nav-item">
+//                                     <NavLink className="nav-link text-danger" aria-current="page" to="/donate">
+//                                         <b>Donate</b>
+//                                     </NavLink>
+//                                 </li>
+//                             </ul>
+//                             <button className="btn btn-outline-success" type="submit">
+//                                 <a href="login">
+//                                     <b>Login</b>
+//                                 </a>
+//                             </button>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </nav>
+//         </div>
+//     );
+// };
+
+// export default Navbar;
+
+
+
+
+
+
+import React, { useRef } from 'react';
+import { Link, NavLink } from "react-router-dom";
+import { Offcanvas } from 'bootstrap';
+import "../navbar.css"
 
 const Navbar = () => {
+  const offcanvasRef = useRef(null);
+
+  const handleLinkClick = () => {
+    const offcanvasElement = offcanvasRef.current;
+    if (offcanvasElement) {
+      const bsOffcanvas = Offcanvas.getInstance(offcanvasElement);
+      if (bsOffcanvas) {
+        bsOffcanvas.hide();
+      }
+    }
+  };
+
   return (
     <div>
-      <div className="container-fluid ">
-        <nav className="navbar navbar-expand-lg shadow bg-warning  rounded  fixed-top  ">
-          <div className="container-fluid logo">
-            <img
-              src={"vidhyahan.png"}
-              alt="logo is not working"
-              width="90px"
-              height="50px"
-            />
-            {/* <img src="https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg" 
-              alt="imgnotworking" width='90px' height='50px'/> */}
-            <Link
-              className="navbar-brand text-primary shadow-lg p-3 mb-1 "
-              to="#"
-            >
-              <b> 𝒱𝐼𝒟𝐻-ये-𝒟𝐻𝒜𝒩 </b>
-            </Link>
-
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
+      <nav className="navbar navbar-expand-lg shadow bg-warning rounded fixed-top">
+        <div className="container-fluid">
+          <img
+            src={"vidhyahan.png"}
+            alt="logo is not working"
+            width="90px"
+            height="50px"
+          />
+          <Link className="navbar-brand p-3 mb-1" to="#">
+            <b>𝐕𝐢𝐝𝐡-ये-𝐃𝐡𝐚𝐧-𝐅𝐮𝐧𝐝𝐚𝐭𝐢𝐨𝐧</b>
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className="offcanvas offcanvas-end"
+            tabIndex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+            ref={offcanvasRef}
+            style={{ backgroundColor: 'white' }} // Ensure the background color is white
+          >
+            <div className="offcanvas-header">
+              <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                className="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="offcanvas-body">
               <ul className="navbar-nav ms-auto mb-lg-0">
                 <li className="nav-item">
-                  <Link
-                    ClassName=" border-outline-success"
-                    className="nav-link   "
-                    aria-current="page"
-                    to="home"
-                    activeClassName="active"
-                  >
+                  <NavLink className="nav-link" aria-current="page" to="/home" onClick={handleLinkClick}>
                     <b>Home</b>
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link  " aria-current="page" to="/">
+                  <NavLink className="nav-link" aria-current="page" to="/" onClick={handleLinkClick}>
                     <b>AboutUs</b>
-                  </Link>
+                  </NavLink>
                 </li>
-
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
-                    href="whatwedo"
+                    className="nav-link dropdown-toggle"
+                    href="#"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     <b>What we do</b>
                   </a>
-                  <ul class="dropdown-menu">
+                  <ul className="dropdown-menu">
                     <li>
-                      <Link
-                        class="dropdown-item"
-                        to="https://www.instagram.com/vidyadhan_non_profit_org/"
+                      <a
+                        className="dropdown-item"
+                        href="https://www.instagram.com/vidyadhan_non_profit_org/"
+                        onClick={handleLinkClick}
                       >
-                        Vidhyadhan instagram
-                      </Link>
+                        Vidhyadhan Instagram
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        class="dropdown-item"
-                        to="https://www.flipkart.com/"
-                      >
+                      <a className="dropdown-item" href="https://www.flipkart.com/" onClick={handleLinkClick}>
                         Flipkart Website
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        class="dropdown-item"
-                        to="https://y4d.ngo/what_we_do"
+                      <a
+                        className="dropdown-item"
+                        href="https://y4d.ngo/what_we_do"
+                        onClick={handleLinkClick}
                       >
                         Something else here
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </li>
-
                 <li className="nav-item">
-                  <Link
-                    className="nav-link   "
-                    aria-current="page"
-                    to="projects"
-                  >
+                  <NavLink className="nav-link" aria-current="page" to="/projects" onClick={handleLinkClick}>
                     <b>Projects</b>
-                  </Link>
+                  </NavLink>
                 </li>
-
                 <li className="nav-item">
-                  <Link className="nav-link " aria-current="page" to="gallery">
+                  <NavLink className="nav-link" aria-current="page" to="/gallery" onClick={handleLinkClick}>
                     <b>Gallery</b>
-                  </Link>
+                  </NavLink>
                 </li>
-
                 <li className="nav-item">
-                  <Link className="nav-link" aria-current="page" to="contactus">
+                  <NavLink className="nav-link" aria-current="page" to="/contactus" onClick={handleLinkClick}>
                     <b>ContactUs</b>
-                  </Link>
+                  </NavLink>
                 </li>
-
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
-                    href="whatwedo"
+                    className="nav-link dropdown-toggle"
+                    href="#"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     <b>Media Corner</b>
                   </a>
-                  <ul class="dropdown-menu">
+                  <ul className="dropdown-menu">
                     <li>
-                      <Link
-                        class="dropdown-item"
-                        to="https://web.whatsapp.com/"
-                      >
+                      <a className="dropdown-item" href="https://web.whatsapp.com/" onClick={handleLinkClick}>
                         Vidhyadhan Whatsapp
-                      </Link>
+                      </a>
                     </li>
-
                     <li>
-                      <Link class="dropdown-item" to="https://www.amazon.com/">
+                      <a className="dropdown-item" href="https://www.amazon.com/" onClick={handleLinkClick}>
                         Flipkart Website
-                      </Link>
+                      </a>
                     </li>
-
                     <li>
-                      <Link
-                        class="dropdown-item"
-                        to="https://y4d.ngo/what_we_do"
+                      <a
+                        className="dropdown-item"
+                        href="https://y4d.ngo/what_we_do"
+                        onClick={handleLinkClick}
                       >
                         Something else here
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </li>
-
                 <li className="nav-item">
-                  <Link
-                    className="nav-link text-danger"
-                    aria-current="page"
-                    to="donate"
-                  >
+                  <NavLink className="nav-link text-danger" aria-current="page" to="/donate" onClick={handleLinkClick}>
                     <b>Donate</b>
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
               <button className="btn btn-outline-success" type="submit">
                 <a href="login">
-                  <b> Login </b>
+                  <b>Login</b>
                 </a>
               </button>
-              {/* <form className="d-flex" role="search">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-outline-success" type="submit">
-                  Login
-                </button>
-              </form> */}
             </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </div>
   );
 };
 
 export default Navbar;
+
+

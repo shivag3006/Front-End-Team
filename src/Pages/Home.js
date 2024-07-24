@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../../node_modules/bootstrap/dist/js/bootstrap.bundle"
 import { Carousel } from "react-bootstrap";
 import { Card, Button } from "react-bootstrap";
 

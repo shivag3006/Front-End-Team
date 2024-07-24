@@ -1,0 +1,8 @@
+.offcanvas {
+    background-color: white !important; /* Force the offcanvas background to be white */
+  }
+  
+  .offcanvas-backdrop.show {
+    opacity: 0 !important; /* Override the default opacity */
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Ensure backdrop color */
+  }
