@@ -185,7 +185,7 @@ const Navbar = () => {
             height="50px"
           />
           <Link className="navbar-brand p-3 mb-1" to="#">
-            <b>𝐕𝐢𝐝𝐡-ये-𝐃𝐡𝐚𝐧-𝐅𝐮𝐧𝐝𝐚𝐭𝐢𝐨𝐧</b>
+            <b>𝐕𝐢𝐝𝐡-ये-𝐃𝐡𝐚𝐧</b>
           </Link>
           <button
             className="navbar-toggler"
@@ -228,7 +228,7 @@ const Navbar = () => {
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
-                    href="#"
+                    href=" "
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -279,7 +279,7 @@ const Navbar = () => {
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
-                    href="#"
+                    href=" "
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
