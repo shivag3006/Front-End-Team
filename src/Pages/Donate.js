@@ -34,7 +34,7 @@ const Donate = () => {
           <div className="col-md-6 shadow ">
             <div className="card mt-5 ">
               <div className="card-body">
-                <h1 className="text-center">Donate Form</h1>
+                <h1 className="text-center">𝐃𝐨𝐧𝐚𝐭𝐞 𝐅𝐨𝐫𝐦</h1>
                 <Form onSubmit={handleSubmit}>
                   <Form.Group controlId="formName">
                     <Form.Label>Name</Form.Label>
@@ -123,7 +123,7 @@ const Donate = () => {
           </div>
 
           <div className="col-md-6 text-center shadow ">
-            <h1>Account Details</h1>
+            <h1>𝐀𝐜𝐜𝐨𝐮𝐧𝐭 𝐃𝐞𝐭𝐚𝐢𝐥𝐬</h1>
           </div>
         </div>
       </div>
