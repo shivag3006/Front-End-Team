@@ -51,7 +51,7 @@ function ContactUs() {
         <div className="col-md-6 shadow ">
           <div className="card  ">
             <div className="card-body  bg-warning">
-              <h1 className="text-center mb-4">Register here</h1>
+              <h1 className="text-center mb-4">𝐑𝐞𝐠𝐢𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐟𝐨𝐫𝐦</h1>
               <form onSubmit={handleSubmit} className="w-1">
                 <div className="w-100">
                   <label htmlFor="name" className="form-label">
@@ -179,7 +179,7 @@ function ContactUs() {
         </div>
 
         <div className="col-md-6 shadow ">
-          <h1 className="shadow text-center">Address & Contact Info</h1>
+          <h1 className="shadow text-center">𝐀𝐝𝐝𝐫𝐞𝐬𝐬 & 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐈𝐧𝐟𝐨</h1>
           <div claaaName="card">
             <div class="con-com home-list-pop">
               <p className="shadow ">

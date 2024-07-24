@@ -17,7 +17,7 @@ function Login() {
     <div className="container login mt-5 ">
       <Row className="justify-content-md-center shadow">
         <Col md={4} className="bg-warning">
-          <h2 className="text-center shadow text-dark"> <b> 𝐋𝐨𝐠𝐢𝐧 𝐏𝐚𝐠𝐞</b></h2>
+          <h2 className="text-center shadow text-dark"> <b> 𝐋𝐨𝐠𝐢𝐧 𝐏𝐚𝐠𝐞 </b></h2>
 
           <Form onSubmit={handleLogin}>
             <Form.Group controlId="formBasicEmail">
