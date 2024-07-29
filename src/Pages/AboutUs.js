@@ -87,7 +87,7 @@ const AboutUs = () => {
         </a>
       </div>
 
-      <Link to="http://localhost:3000/home" className="btn btn-primary">Back to Home</Link>
+      <Link to="https://vidhyadhan-fundation.vercel.app/home" className="btn btn-primary">Back to Home</Link>
 
 
     </div>
