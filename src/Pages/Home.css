@@ -1,0 +1,21 @@
+.animated-carousel {
+    animation: fadeIn 2s;
+  }
+  
+  .animated-card {
+    transition: transform 0.2s;
+  }
+  
+  .animated-card:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

@@ -1,39 +1,104 @@
-import React from "react";
+// import React, { useState } from 'react';
+// import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+// import { CSSTransition, TransitionGroup } from 'react-transition-group';
+// import './Gallery.css'; // Create this CSS file for custom animations
 
-function Gallery() {
+// const Gallery = ({ images }) => {
+//   const [showImages, setShowImages] = useState(true);
+
+//   const toggleImages = () => {
+//     setShowImages(!showImages);
+//   };
+
+//   return (
+//     <div>
+//       <Container>
+//         <Button onClick={toggleImages} className="mb-3">
+//           {showImages ? 'Hide Images' : 'Show Images'}
+//         </Button>
+//         <TransitionGroup as={Row} className="g-4">
+//           {showImages && images.map((image, index) => (
+//             <CSSTransition key={index} timeout={500} classNames="fade">
+//               <Col xs={12} sm={6} md={4} lg={3}>
+//                 <Card>
+//                   <Card.Img variant="top" src={image.src} alt={image.alt} />
+//                   <Card.Body>
+//                     <Card.Title>{image.title}</Card.Title>
+//                     <Card.Text>{image.description}</Card.Text>
+//                   </Card.Body>
+//                 </Card>
+//               </Col>
+//             </CSSTransition>
+//           ))}
+//         </TransitionGroup>
+//       </Container>
+
+
+
+//       <div className="popup-side-bar2 ">
+//         <a
+//           href="RequestCallback"
+//           className="home-enquiry-trigger pum-trigger"
+//           style={{ cursor: "pointer" }}
+//         >
+//           <b> Request Callback </b>
+//         </a>
+//       </div>
+
+//       <div className="popup-side-bar ">
+//         <a
+//           href="ContactUs"
+//           className="home-enquiry-trigger pum-trigger"
+//           style={{ cursor: "pointer" }}
+//         >
+//           <b> Enquiry Now </b>
+//         </a>
+//       </div>
+
+
+
+//     </div>
+//   );
+// }
+
+// export default Gallery;
+
+
+
+import React, { useState } from 'react';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import './Gallery.css';
+
+const Gallery = ({ images = [] }) => { // Default to an empty array
+  const [showImages, setShowImages] = useState(true);
+
+  const toggleImages = () => {
+    setShowImages(!showImages);
+  };
+
   return (
-    <div className="gallery mt-5 shadow">
-      <h1> Gallery </h1>
-      <div className="container home-list-pop shadow">
-        <div className="=row2 home-list-pop shadow">
-          <div className="p-card w-100">
-            <div className="card-body home-list-pop shadow">
-              <div data-filter="*" >
-                <div class="cbp-filter-item-active cbp-filter-item" >
-                  All <input id="allfilter" type="hidden" value="All"/> 
-                </div>
-              </div >
-
-            </div >
-          </div>
-        </div>
-      </div>
-
-
-
-      {/* <div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-left">
-        <div data-filter="*" onclick="checkallfilter()" class="cbp-filter-item-active cbp-filter-item">All 
-       <input type="hidden" id="allfilter" value="All"/>
-        </div>
-          <div data-filter=".4" onclick="checkfilter()" class="cbp-filter-item">Home Page Featured</div>
-          <input type="hidden" id="filter" value="Home Page Featured"/>
-            <div data-filter=".3" onclick="checkfilter()" class="cbp-filter-item">CSR Partnerships</div>
-            <input type="hidden" id="filter" value="CSR Partnerships"/>
-              <div data-filter=".2" onclick="checkfilter()" class="cbp-filter-item">Youth Empowerment</div>
-              <input type="hidden" id="filter" value="Youth Empowerment"/>
-                <div data-filter=".1" onclick="checkfilter()" class="cbp-filter-item">Children Upliftment</div>
-                <input type="hidden" id="filter" value="Children Upliftment"/>
-      </div> */}
+    <div>
+      <Container>
+        <Button onClick={toggleImages} className="mb-3">
+          {showImages ? 'Hide Images' : 'Show Images'}
+        </Button>
+        <TransitionGroup as={Row} className="g-4">
+          {showImages && images.map((image, index) => (
+            <CSSTransition key={index} timeout={500} classNames="fade">
+              <Col xs={12} sm={6} md={4} lg={3}>
+                <Card>
+                  <Card.Img variant="top" src={image.src} alt={image.alt} />
+                  <Card.Body>
+                    <Card.Title>{image.title}</Card.Title>
+                    <Card.Text>{image.description}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
+      </Container>
 
       <div className="popup-side-bar2 ">
         <a
@@ -55,10 +120,9 @@ function Gallery() {
         </a>
       </div>
 
-
-
     </div>
   );
-}
+};
 
 export default Gallery;
+

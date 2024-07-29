@@ -14,8 +14,8 @@ import Login from "./Pages/Login";
 import Donate from "./Pages/Donate";
 import MediaCorner from "./Pages/MediaCorner";
 import RequestCallback from "./Pages/RequestCallback";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import ForGallery from './ForGallery';
+
 
 const App = () => {
   return (
@@ -28,12 +28,15 @@ const App = () => {
             <Route path="home" element={<Home />} />
             <Route path="whatwedo" element={<WhatWeDo />} />
             <Route path="projects" element={<Projects />} />
+            
             <Route path="gallery" element={<Gallery />} />
+            <Route path="forgallery" element={<ForGallery/>} /> 
             <Route path="*" element={<ContactUs />} />
             <Route path="login" element={<Login />} />
             <Route path="donate" element={<Donate />} />
             <Route path="mediacorner" element={<MediaCorner />} />
             <Route path="requestcallback" element={<RequestCallback />} />
+
           </Route>
         </Routes>
         <Footer />
