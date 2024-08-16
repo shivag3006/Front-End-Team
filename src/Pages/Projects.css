@@ -1,0 +1,60 @@
+/* Add shadow and hover effect to the container */
+.shadow-container {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .shadow-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /*============================== Custom hover effect for images========================= */
+  .img-hover {
+    width:300px;
+  
+    float: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .img-hover:hover {
+    transform: scale(1.05);
+  }
+  .buttonLabel{
+    float: right;
+  }
+  /*======================= Animation for transitions =========================*/
+  .fade-enter {
+    opacity: 0.01;
+    transform: translateY(-10px);
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-exit-active {
+    opacity: 0.01;
+    transform: translateY(10px);
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+  }
+  
+  /*============================== Social media buttons styling================= */
+  .social-media-buttons a {
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .social-media-buttons a:hover {
+    background-color: #c70909;
+    color: #fff;
+  }
+  

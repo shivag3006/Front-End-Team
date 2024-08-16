@@ -1,32 +1,21 @@
+body, html {
+  overflow-x: hidden;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ===================================the above code is IMP for all Webpages ===================================== */
+  
   .nav-item a:hover {
     color: rgb(241, 233, 243); 
   }
   body {
     padding-top:120px;
   }
-  /* .home{
-    padding-top:70px;
-  }
-  .about{
-    padding-top:70px;
-  }
-  .projects{
-    padding-top:100px;
-  }
-  .gallery{
-    padding-top:70px;
-  }
-  .contact{
-    padding-top:70px;
-  }
-  .donate{
-    padding-top:100px;
-  }
-  .login{
-    padding-top:80px;
-  } */
-
+  
   
 /* ======================================for Login Apllication=====================================  */
   

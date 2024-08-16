@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { Link } from "react-router-dom";
 
@@ -82,9 +82,6 @@ function ContactUs() {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="password" className="form-label">
-                    Password
-                  </label>
                   <label htmlFor="password" className="form-label">
                     Password
                   </label>
@@ -212,8 +209,8 @@ function ContactUs() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.165185938272!2d78.40848457125446!3d17.48591406333599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb919ba3872c5f%3A0xca5875cb077d27b2!2sMHS%20Delight%20Cream!5e1!3m2!1sen!2sus!4v1707559116191!5m2!1sen!2sus"
                 title="Unique Title 2"
-                width="546px"
-                height="578px"
+                width="100%"
+                height="100%"
                 referrerpolicy="no-referrer-when-downgrade"
                 loading="lazy"
               ></iframe>
