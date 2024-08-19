@@ -213,12 +213,31 @@ body, html {
 .request button:hover {
   background: #21a1f1;
 }
-/* ===============================CSS for 𝐋𝐨𝐠𝐢𝐧 𝐏𝐚𝐠𝐞========================================== */
+/* ===============================CSS for Gallery ========================================== */
 
-/* .image {
-  background-image: url("Login2.jpg");
-  background-size: 100% 100%;
-  padding: 77px;
+.animated-card {
+  transition: transform 0.3s;
+}
 
-} */
+.animated-card:hover {
+  transform: scale(1.05);
+}
+
+.animated-image {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.animated-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.animated-button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.animated-button:hover {
+  transform: translateY(-3px);
+}
+
 

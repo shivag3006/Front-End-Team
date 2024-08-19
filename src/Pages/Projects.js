@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Button } from "react-bootstrap"; // Import Button from React Bootstrap
+import { FaInfoCircle, FaPhone } from "react-icons/fa"; // Import icons from react-icons
 import './Projects.css'; // Custom CSS for animations
 
 const projectData = [
@@ -41,7 +43,11 @@ const Projects = () => {
             <div className="row my-4 align-items-center">
               <div className="col-md-12">
                 <div className="p-card w-100 shadow-container">
-                  <img src={project.imageUrl} alt="Project" className="img-fluid shadow-sm rounded img-hover buttonLabel" />
+                  <img
+                    src={project.imageUrl}
+                    alt="Project"
+                    className="img-fluid shadow-sm rounded img-hover"
+                  />
                   <div className="card-body home-list-pop">
                     <p className="list-spac">{project.description}</p>
                     <div className="mb-3 list-spac">
@@ -54,8 +60,12 @@ const Projects = () => {
                         {project.buttonLabel}
                       </Link>
                       <div className="d-flex justify-content-between">
-                        <Button variant="link" href={project.detailsLink}><FaInfoCircle /> Read More...</Button>
-                        <Button variant="link" href={project.contactLink}><FaPhone /> Contact Us</Button>
+                        <Button variant="link" href="#">
+                          <FaInfoCircle /> Read More...
+                        </Button>
+                        <Button variant="link" href="#">
+                          <FaPhone /> Contact Us
+                        </Button>
                       </div>
                     </div>
                   </div>
@@ -65,8 +75,6 @@ const Projects = () => {
           </CSSTransition>
         ))}
       </TransitionGroup>
-
-
 
       <div className="popup-side-bar">
         <a
@@ -90,20 +98,39 @@ const Projects = () => {
 
       <div className="container py-5">
         <div className="social-media-buttons text-center my-5">
-          <a href={socialMediaLinks.instagram} target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark mx-1">
+          <a
+            href={socialMediaLinks.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline-dark mx-1"
+          >
             <i className="fab fa-instagram"></i> Instagram
           </a>
-          <a href={socialMediaLinks.facebook} target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark mx-1">
+          <a
+            href={socialMediaLinks.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline-dark mx-1"
+          >
             <i className="fab fa-facebook"></i> Facebook
           </a>
-          <a href={socialMediaLinks.whatsapp} target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark mx-1">
+          <a
+            href={socialMediaLinks.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline-dark mx-1"
+          >
             <i className="fab fa-whatsapp"></i> WhatsApp
           </a>
-          <a href={socialMediaLinks.twitter} target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark mx-1">
+          <a
+            href={socialMediaLinks.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline-dark mx-1"
+          >
             <i className="fab fa-twitter"></i> Twitter
           </a>
         </div>
-
 
         <footer className="footer mt-5">
           <div className="container">

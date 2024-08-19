@@ -1,19 +1,24 @@
-.fade-enter {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  .fade-enter-active {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 500ms, transform 500ms;
-  }
-  .fade-exit {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .fade-exit-active {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 500ms, transform 500ms;
-  }
-  
+.animated-card {
+  transition: transform 0.3s;
+}
+
+.animated-card:hover {
+  transform: scale(1.05);
+}
+
+.animated-image {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.animated-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.animated-button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.animated-button:hover {
+  transform: translateY(-3px);
+}

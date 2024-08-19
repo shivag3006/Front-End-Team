@@ -1,13 +1,20 @@
-import React from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { FaMapMarkerAlt, FaInfoCircle, FaPhone } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { Button, Card, Container, Row, Col } from 'react-bootstrap';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css';
+// Import the CSS file for animations
 
 // Gallery Component
 const Gallery = ({ project }) => {
   return (
-    <Card className="mb-4">
-      <Card.Img variant="top" src={project.image} style={{ height: '187px', objectFit: 'cover' }} />
+    <Card className="mb-4 animated-card">
+      <Card.Img
+        variant="top"
+        src={project.image}
+        className="animated-image"
+        style={{ height: '187px', objectFit: 'cover' }}
+      />
       <Card.Body>
         <Card.Title>
           <a href={project.detailsLink}>{project.title}</a>
@@ -25,7 +32,9 @@ const Gallery = ({ project }) => {
             <b>Description: </b>{project.description}
           </p>
         </Card.Text>
-
+        <div className="button-container">
+          <Button variant="primary" href={project.detailsLink}>View Details</Button>
+        </div>
       </Card.Body>
     </Card>
   );
@@ -34,36 +43,74 @@ const Gallery = ({ project }) => {
 // ProjectsList Component
 const ProjectsList = ({ projects }) => {
   return (
-    <div className="home-list-pop list-spac events">
+    <Row>
       {projects.map((project, index) => (
-        <Gallery key={index} project={project} />
+        <Col md={4} key={index}>
+          <Gallery project={project} />
+        </Col>
       ))}
-    </div>
+    </Row>
   );
 };
 
 // App Component
 const App = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const projects = [
     {
-      image: 'https://y4d.ngo/admin/uploads/projects/WhatsApp_Image_2024-02-09_at_18_10_37_(1).jpeg',
-      title: 'Youth Empowerment and Skill Development',
+      image: 'img1.jpeg', // Ensure these paths are correct
+      title: 'Projects',
       theme: 'Skill Development',
-      partnerAgency: 'Hindustan Coca-Cola Beverages',
+      partnerAgency: 'Hindustan',
       beneficiariesDirect: '25000+',
       beneficiariesIndirect: '30000+',
-      location: 'Maharashtra, Goa, Karnataka, Tamil Nadu, Andra Pradesh, Telangana, Madhya Pradesh, Gujarat, Odisha, West Bengal, Bihar, Assam',
-      description: 'Y4D in partnership with the HCCB, is dedicated to offering training to 25,000 young people in sales and marketing. The goal of this effort is to provide youth with important skills that will improve...',
-      detailsLink: 'https://y4d.ngo/project_details/30',
-      contactLink: 'https://y4d.ngo/contact_us'
+      location: 'Hyderabad, Telangana',
+      description: ' is dedicated to offering training to 25,000 young people in sales and marketing...',
+      detailsLink: 'http://localhost:3000/gallery',
+      category: 'Projects',
+    },
+    {
+      image: 'img6.jpeg', // Ensure these paths are correct
+      title: 'Children Education Initiative',
+      theme: 'Education',
+      partnerAgency: 'Save the Children',
+      beneficiariesDirect: '15000+',
+      beneficiariesIndirect: '20000+',
+      location: 'Kukatpally, Hyderabad',
+      description: 'A project focused on providing quality education to underprivileged children across major cities...',
+      detailsLink: 'http://localhost:3000/gallery',
+      category: 'Children',
+    },
+    {
+      image: 'img11.jpeg', // Ensure these paths are correct
+      title: 'Youth Empowerment',
+      theme: 'Skill Development',
+      partnerAgency: 'Hindustan',
+      beneficiariesDirect: '25000+',
+      beneficiariesIndirect: '30000+',
+      location: 'Madhapur, Hyderabad',
+      description: ' is dedicated to offering training to 25,000 young people in sales and marketing...',
+      detailsLink: 'http://localhost:3000/gallery',
+      category: 'Youth',
     }
     // Add more projects as needed
   ];
 
+  const filteredProjects = selectedCategory === 'All'
+    ? projects
+    : projects.filter(project => project.category === selectedCategory);
+
   return (
-    <div>
-      <ProjectsList projects={projects} />
-    </div>
+    <Container>
+      <div className="mb-4">
+        <Button onClick={() => setSelectedCategory('All')} variant="primary" className="me-2 animated-button">All Images</Button>
+        <Button onClick={() => setSelectedCategory('Projects')} variant="secondary" className="me-2 animated-button">Projects Images</Button>
+        <Button onClick={() => setSelectedCategory('Youth')} variant="success" className="me-2 animated-button">Youth Images</Button>
+        <Button onClick={() => setSelectedCategory('Children')} variant="warning" className="me-2 animated-button">Children's Images</Button>
+      </div>
+      <ProjectsList projects={filteredProjects} />
+    </Container>
   );
 };
 
