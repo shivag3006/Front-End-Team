@@ -12,7 +12,7 @@
   
   /*============================== Custom hover effect for images========================= */
   .img-hover {
-    width:300px;
+    width:400px;
   
     float: left;
     transition: transform 0.3s ease-in-out;
@@ -46,6 +46,13 @@
     transform: translateY(10px);
     transition: opacity 500ms ease-in, transform 500ms ease-in;
   }
+  .list-spac{
+    text-align: end;
+  }
+.gap-2{
+  margin-left: 700px;
+}
+ 
   
   /*============================== Social media buttons styling================= */
   .social-media-buttons a {

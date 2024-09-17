@@ -9,7 +9,7 @@ import './Projects.css'; // Custom CSS for animations
 const projectData = [
   {
     imageUrl: "https://fjwp.s3.amazonaws.com/blog/wp-content/uploads/2019/07/16152747/project-management.png",
-    description: "Y4D Foundation, 402, The Onyx, Near Euro School, Wakad, Pune, Maharashtra, India - 411057",
+    description: "Y4D Foundation,  Wakad, Pune, Maharashtra, India - 411057",
     buttonLabel: "More Info",
     phoneNumber: "+91-1234567890",
   },
