@@ -62,7 +62,11 @@ function Login() {
                 </Form.Group>
 
                 <div className="mt-4">
-                  <Button variant="primary" type="submit" block><b>Login</b></Button>
+                  <Button variant="outline-success">
+                    <a href="login">
+                      <b>Login</b>
+                    </a>
+                  </Button>
                 </div>
 
                 <div className="mt-3 d-flex justify-content-between">

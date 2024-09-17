@@ -109,6 +109,17 @@ const App = () => {
         <Button onClick={() => setSelectedCategory('Youth')} variant="success" className="me-2 animated-button">Youth Images</Button>
         <Button onClick={() => setSelectedCategory('Children')} variant="warning" className="me-2 animated-button">Children's Images</Button>
       </div>
+      <div className="popup-side-bar">
+        <a href="ContactUs" className="home-enquiry-trigger pum-trigger Shadow" style={{ cursor: 'pointer' }}>
+          <b>Enquiry Now</b>
+        </a>
+      </div>
+
+      <div className="popup-side-bar2">
+        <a href="RequestCallback" className="home-enquiry-trigger pum-trigger" style={{ cursor: 'pointer' }}>
+          <b>Request Callback</b>
+        </a>
+      </div>
       <ProjectsList projects={filteredProjects} />
     </Container>
   );
