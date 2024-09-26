@@ -100,7 +100,7 @@ function ContactUs() {
         <div className="col-md-6 shadow">
           <div className="card">
             <div className="card-body bg-warning">
-              <h1 className="text-center mb-4">Registration Form</h1>
+              <h1 className="text-center mb-4">𝐑𝐞𝐠𝐢𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐅𝐨𝐫𝐦</h1>
               {errorMessage && (
                 <p className="text-danger text-center">
                   <FaTimesCircle /> {errorMessage}
@@ -222,7 +222,7 @@ function ContactUs() {
         </div>
 
         <div className="col-md-6 shadow">
-          <h1 className="shadow text-center">Address & Contact Info</h1>
+          <h1 className="shadow text-center">𝐀𝐝𝐝𝐫𝐞𝐬𝐬 & 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐈𝐧𝐟𝐨</h1>
           <div className="card">
             <div className="card-body">
               <p className="shadow">

@@ -105,7 +105,6 @@ const AboutUs = () => {
           <b>Enquiry Now</b>
         </a>
       </div>
-
       <div className="popup-side-bar2">
         <a href="RequestCallback" className="home-enquiry-trigger pum-trigger" style={{ cursor: 'pointer' }}>
           <b>Request Callback</b>

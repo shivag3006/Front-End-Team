@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import { Carousel, Card, Button } from "react-bootstrap";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import "./Home.css";  // Assuming you have a CSS file for custom styles
 
 const Home = () => {
@@ -139,7 +139,7 @@ const Home = () => {
             <div className="col-md-4 mb-3">
               <h5>Quick Links</h5>
               <ul className="list-unstyled">
-    
+
                 <li><a href="AboutUs"><b>AboutUs</b></a></li>
                 <li><a href="Projects"><b>Projects</b></a></li>
                 <li><a href="ContactUs"><b>ContactUs</b></a></li>
@@ -149,10 +149,15 @@ const Home = () => {
             <div className="col-md-4 mb-3">
               <h5>Follow Us</h5>
               <div className="social-icons ">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="animated-icon"><FaFacebook /></a>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="animated-icon"><FaTwitter /></a>
-                <a href="https://www.instagram.com/vidyadhan_non_profit_org/" target="_blank" rel="noopener noreferrer" className="animated-icon"><FaInstagram /></a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="animated-icon"><FaLinkedin /></a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="fb"><FaFacebook /></a>
+                
+                <a href="https://www.instagram.com/vidyadhan_non_profit_org/" target="_blank" rel="noopener noreferrer" className="insta">
+                <FaInstagram style={{ fontSize: '34px', color: 'red' }} /></a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="animated-icon">
+                <FaTwitter  /></a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="lnkdn"><FaLinkedin /></a>
+                <a href="https://wa.me/8686963526" target="_blank" rel="noopener noreferrer" className="animated-icon">
+                  <FaWhatsapp style={{ fontSize: '34px', color: '#25D366' }} /> </a>
               </div>
             </div>
           </div>
