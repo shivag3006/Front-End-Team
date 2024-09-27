@@ -3,6 +3,7 @@ import { Button, Card, Container, Row, Col } from 'react-bootstrap';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
+import './Gallery.css';
 // Import the CSS file for animations
 
 // Gallery Component

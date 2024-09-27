@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
-import { Link } from 'react-router-dom';
+import { useGoogleLogin } from '@react-oauth/google'; // Import Google OAuth hook
 import './Login.css'; // Import your CSS file
 
 function Login() {
@@ -8,6 +8,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isResetPassword, setIsResetPassword] = useState(false);
+  const [userInfo, setUserInfo] = useState(null);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -25,6 +26,22 @@ function Login() {
     setIsLoginOpen(prev => !prev);
     setIsResetPassword(false); // Ensure reset password view is not shown when opening login
   };
+
+  // Google login function
+  const loginWithGoogle = useGoogleLogin({
+    onSuccess: async (response) => {
+      // Call the Google API to get user information
+      const userInfoResponse = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+        headers: {
+          'Authorization': `Bearer ${response.access_token}`,
+        },
+      });
+      const userInfo = await userInfoResponse.json();
+      setUserInfo(userInfo);
+      console.log(userInfo); // Check the user info data here
+    },
+    onError: (error) => console.log('Login Failed:', error),
+  });
 
   return (
     <div>
@@ -64,15 +81,21 @@ function Login() {
                 <div className="mt-4">
                   <Button variant="outline-success">
                     <a href="login">
-                      <b>Login</b>
+                      <b>𝐋𝐨𝐠𝐢𝐧</b>
                     </a>
                   </Button>
                 </div>
 
                 <div className="mt-3 d-flex justify-content-between">
-                  <Button variant="danger" block className="me-2"><b>Sign in with Gmail</b></Button>
+                  <Button variant="danger" block onClick={loginWithGoogle}><b>Sign in with Gmail</b></Button>
                   <Button variant="info" block><b>Sign in with Instagram</b></Button>
                 </div>
+
+                {userInfo && (
+                  <div className="mt-4">
+                    <p>Signed in as: {userInfo.email}</p>
+                  </div>
+                )}
 
                 <div className="mt-4">
                   <a href="#forgot-password" onClick={() => setIsResetPassword(true)}>Forgot Password?</a>

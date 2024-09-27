@@ -60,7 +60,7 @@ const AboutUs = () => {
         </div>
 
         <div className="col-md-4 mb-4">
-          <Card className="homecard">
+           <Card className="homecard">
             <Card.Img variant="top" src="img4.jpeg" />
             <Card.Body>
               <Card.Title>Child Upliftment</Card.Title>
